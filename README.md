@@ -46,8 +46,8 @@ Before starting the system, you need to configure the PostgreSQL server:
       strategy: postgres
       url: jdbc:postgresql://localhost:5432/data-base-1
       table: users
-      user: postgres
-      password: smile2222
+      user: username
+      password: password
       driver-class-name: org.postgresql.Driver
       mapping:
         id: user_id
@@ -58,8 +58,8 @@ Before starting the system, you need to configure the PostgreSQL server:
       strategy: postgres
       url: jdbc:postgresql://localhost:5432/data-base-2
       table: user_table
-      user: postgres
-      password: smile2222
+      user: username
+      password: password
       driver-class-name: org.postgresql.Driver
       mapping:
         id: ldap_login
