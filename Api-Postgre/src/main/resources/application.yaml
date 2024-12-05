@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: Api-Postgre
+  data-sources:
+    - name: data-base-1
+      strategy: postgres
+      url: jdbc:postgresql://localhost:5432/data-base-1
+      table: users
+      user: postgres
+      password: smile2222
+      driver-class-name: org.postgresql.Driver
+      mapping:
+        id: user_id
+        username: login
+        name: first_name
+        surname: last_name
+    - name: data-base-2
+      strategy: postgres
+      url: jdbc:postgresql://localhost:5432/data-base-2
+      table: user_table
+      user: postgres
+      password: smile2222
+      driver-class-name: org.postgresql.Driver
+      mapping:
+        id: ldap_login
+        username: ldap_login
+        name: name
+        surname: surname
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  springdoc:
+    api-docs:
+      enabled: true
+    swagger-ui:
+      enabled: true
+      path: /swagger-ui.html
